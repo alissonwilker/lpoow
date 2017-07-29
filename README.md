@@ -1,2 +1,2 @@
-# lpoow
-Repositório da disciplina LPOOW
+# lpoow-tomcat
+Repositório da disciplina LPOOW usando Tomcat

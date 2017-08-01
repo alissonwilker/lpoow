@@ -4,9 +4,14 @@
 		"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 		<property name="hibernate.connection.datasource">java:comp/env/jdbc/MeuDataSource</property>
 		<property name="hibernate.current_session_context_class">thread</property>
+		<!-- Validate schema on startup -->
+		<property name="hbm2ddl.auto">validate</property>
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+		<!-- Names the annotated entity class -->
+		<mapping class="br.edu.ifb.model.Employee" />
 	</session-factory>
 </hibernate-configuration>
